@@ -93,7 +93,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_OAUTH_CLIENT_ID,
     clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
-    callbackURL: "https://sheltered-mesa-47426.herokuapp.com/auth/google/secrets",
+    callbackURL: "https://pure-lake-05784.herokuapp.com/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -110,7 +110,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "https://sheltered-mesa-47426.herokuapp.com/auth/facebook/secrets"
+    callbackURL: "https://pure-lake-05784.herokuapp.com/auth/facebook/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
@@ -126,7 +126,7 @@ passport.use(new FacebookStrategy({
 passport.use(new TwitterStrategy({
     consumerKey: process.env.TWITTER_API_KEY,
     consumerSecret: process.env.TWITTER_API_TOKEN,
-    callbackURL: "https://sheltered-mesa-47426.herokuapp.com/auth/twitter/secrets"
+    callbackURL: "https://pure-lake-05784.herokuapp.com/auth/twitter/secrets"
   },
   function(token, tokenSecret, profile, cb) {
     console.log(profile);
